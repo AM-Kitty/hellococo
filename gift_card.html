@@ -9,7 +9,7 @@
 <title>Coco Fresh Tea and Juice</title>
 <meta name="description" content="Coco Fresh Tea and Juice " />
 <meta name="keywords" content="" />
-<link rel="stylesheet" href="./src/css/about.css">
+<link rel="stylesheet" href="./src/css/gift_card.css">
 <style type="text/css">
 .form input:focus, .form textarea:focus {
 	border-color: #ef3f3c;
@@ -24,6 +24,29 @@ body {
 <script src="./src/js/jquery1.7.js"></script>
 <script src="./src/js/responsiveslides.min.js"></script>
 <script src="./src/js/main.js"></script>
+<script>
+    $(function() {
+        $(".rslides").responsiveSlides({
+            auto: true,             // Boolean: Animate automatically, true or false
+            // speed: 500,            // Integer: Speed of the transition, in milliseconds
+            // timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+            // pager: false,           // Boolean: Show pager, true or false
+            // nav: false,             // Boolean: Show navigation, true or false
+            // random: false,          // Boolean: Randomize the order of the slides, true or false
+            // pause: false,           // Boolean: Pause on hover, true or false
+            // pauseControls: true,    // Boolean: Pause when hovering controls, true or false
+            // prevText: "Previous",   // String: Text for the "previous" button
+            // nextText: "Next",       // String: Text for the "next" button
+            maxwidth: "450px",           // Integer: Max-width of the slideshow, in pixels
+            // navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
+            // manualControls: "",     // Selector: Declare custom pager navigation
+            // namespace: "rslides",   // String: Change the default namespace used
+            // before: function(){},   // Function: Before callback
+            // after: function(){}     // Function: After callback
+        });
+    });
+        
+</script>
 </head>
 
 <body>
@@ -33,10 +56,10 @@ body {
     <div class="nav_icon"></div>
     <ul>
       <div class="side_close"></div>
-      <li  class='on' ><a href="./index.html">Home</a> </li>
+      <li  ><a href="./index.html">Home</a> </li>
       <li class=''><a href="./menu.html">Our Menu</a>
         
-      </li><li class=''><a href="./gift_card.html">Gift Cards</a>
+      </li><li class='on'><a href="./gift_card.html">Gift Cards</a>
   
       </li><li class=''><a href="./about.html">About CoCo</a>
 
@@ -48,6 +71,35 @@ body {
 
     </ul>
   </div>
+</div>
+
+<!--title-->
+<div style="margin-top:80px; text-align: center; margin-bottom: 30px;">
+    <h5>Give the Perfect Gift</h5>
+</div>
+
+<!--slide gallery-->
+<div style="width: 450px; margin-left: auto; margin-right: auto; ">
+    <div class="slider_main" >
+        <!-- Slideshow-->
+        <ul class="rslides" id="slider" style="height: 300px;">
+            <li>
+                <img src="src/images/gift.jpg" alt="" />
+            </li>
+            <li><img src="src/images/slide1.jpg" alt="" />
+            </li>
+            <li><img src="src/images/slide2.jpg" alt="" />
+            </li>
+        
+        </ul>
+        <div class="icon_down"></div>
+        <div class="mouse"></div>
+    </div>
+</div>
+
+<!--form-->
+<div>
+
 </div>
 
 <!-- END --> 
