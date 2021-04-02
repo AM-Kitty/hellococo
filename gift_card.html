@@ -4,16 +4,13 @@
 <meta charset="utf-8">
 <meta content="telephone=no" name="format-detection" />
 <meta content="email=no" name="format-detection" />
-<!-- <meta name="apple-mobile-web-app-capable" content="yes" /> -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Coco Fresh Tea and Juice</title>
 <meta name="description" content="Coco Fresh Tea and Juice " />
 <meta name="keywords" content="" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="./src/css/gift_card.css">
 <style type="text/css">
-.form input:focus, .form textarea:focus {
-	border-color: #ef3f3c;
-}
 .header:after, .slider_sub {
 	background-color: lightsalmon;
 }
@@ -27,60 +24,76 @@ body {
 <script>
     $(function() {
         $(".rslides").responsiveSlides({
-            auto: true,             // Boolean: Animate automatically, true or false
-            // speed: 500,            // Integer: Speed of the transition, in milliseconds
-            // timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
-            // pager: false,           // Boolean: Show pager, true or false
-            // nav: false,             // Boolean: Show navigation, true or false
-            // random: false,          // Boolean: Randomize the order of the slides, true or false
-            // pause: false,           // Boolean: Pause on hover, true or false
-            // pauseControls: true,    // Boolean: Pause when hovering controls, true or false
-            // prevText: "Previous",   // String: Text for the "previous" button
-            // nextText: "Next",       // String: Text for the "next" button
+            auto: false,             // Boolean: Animate automatically, true or false
             maxwidth: "450px",           // Integer: Max-width of the slideshow, in pixels
-            // navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
-            // manualControls: "",     // Selector: Declare custom pager navigation
-            // namespace: "rslides",   // String: Change the default namespace used
-            // before: function(){},   // Function: Before callback
-            // after: function(){}     // Function: After callback
         });
     });
         
 </script>
+<script>
+  var count = 1;
+  function setColor(btn, color) {
+      // alert("ready")
+      var property = document.getElementById(btn);
+      // alert(property)
+      if (count == 0) {
+          property.style.background = "#FFFFFF"
+          property.style.color = "#ffa07a"
+          count = 1;        
+      }
+      else {
+          property.style.backgroundColor = "#ffa07a"
+          property.style.color="#FFFFFF"
+          count = 0;
+      }
+  }
+</script>
 </head>
 
 <body>
+
 <div class="header">
   <div class="nav">
     <div class="logo"> <a href="./index.html"><img src="./src/images/logo.png"></a> </div>
     <div class="nav_icon"></div>
     <ul>
       <div class="side_close"></div>
-      <li  ><a href="./index.html">Home</a> </li>
-      <li class=''><a href="./menu.html">Our Menu</a>
-        
-      </li><li class='on'><a href="./gift_card.html">Gift Cards</a>
-  
-      </li><li class=''><a href="./about.html">About CoCo</a>
-
-      </li><li class=''><a href="./loc.html">Locations/Maps</a>
-
-      </li><li class=''><a href="https://www.instagram.com/cocoteaontario/"><img src="./src/images/logo-instagram.png"></a>
-
-      </li><li class=''><a href="https://www.facebook.com/cocoteaontario/"><img src="./src/images/facebook-logo.png"></a></li>
+      <li>
+        <a href="./index.html">Home</a> 
+      </li>
+      <li class=''>
+        <a href="./menu.html">Our Menu</a>
+      </li>
+      <li class='on'>
+        <a href="./gift_card.html">Gift Cards</a>
+      </li>
+      <li class=''>
+        <a href="./about.html">About CoCo</a>
+      </li>
+      <li class=''>
+        <a href="./loc.html">Locations/Maps</a>
+      </li>
+      <li class=''>
+        <a href="https://www.instagram.com/cocoteaontario/"><img src="./src/images/logo-instagram.png"></a>
+      </li>
+      <li class=''>
+        <a href="https://www.facebook.com/cocoteaontario/"><img src="./src/images/facebook-logo.png"></a>
+      </li>
 
     </ul>
   </div>
 </div>
 
-<!--title-->
-<div style="margin-top:80px; text-align: center; margin-bottom: 30px;">
-    <h5>Give the Perfect Gift</h5>
-</div>
+<div class="content">
+  <!-- Gift Card Section -->
+  <div class="section">
+    <div class="section_title_1">
+      <h5>Give the Perfect Gift</h5>
+      <p style="font-weight: bold; font-size: medium; color: gray;">Give the voucher for yourself or gift one to a friend~</p>
+    </div>
 
-<!--slide gallery-->
-<div style="width: 450px; margin-left: auto; margin-right: auto; ">
-    <div class="slider_main" >
+    <div class="gift_gallery">
+      <div class="slider_main" >
         <!-- Slideshow-->
         <ul class="rslides" id="slider" style="height: 300px;">
             <li>
@@ -88,29 +101,130 @@ body {
             </li>
             <li><img src="src/images/slide1.jpg" alt="" />
             </li>
-            <li><img src="src/images/slide2.jpg" alt="" />
+            <li><img src="src/images/gift.jpg" alt="" />
             </li>
         
         </ul>
-        <div class="icon_down"></div>
-        <div class="mouse"></div>
+
+        <form method="POST" https://cocofreshtea.ca/contact/" class="decor" style="padding-top: 3%;">
+          <div class="form-inner">
+            <p>EGIFT CARD AMOUNT </p>
+            <!-- <button class="card_amount"  id="button" onclick="setColor('button', '#101010')";>US $10.00</button>
+            <button class="card_amount" id="button2" onclick="setColor('button', '#101010')";>US $25.00</button>
+            <button class="card_amount" id="button3" onclick="setColor('button', '#101010')";>US $50.00</button>
+            <button class="card_amount" id="button4" onclick="setColor('button', '#101010')";>US $75.00</button> -->
+            <div style="display: inline-block;">
+              <ul>
+                <li style="float: left;">
+                  <div class="radio-inline"><input type="radio" name="optradio">
+                    <label>US $10.00</label>
+                  </div></li>
+                  <li style="float: left;">
+                    <div class="radio-inline"><input type="radio" name="optradio">
+                      <label>US $25.00</label>
+                    </div>
+                  </li>
+                  <li style="float: left;">
+                    <div class="radio-inline"><input type="radio" name="optradio">
+                      <label>US $50.00</label>
+                    </div>
+                  </li>
+                  <li style="float: left;">
+                    <div class="radio-inline"><input type="radio" name="optradio">
+                      <label>US $75.00</label>
+                    </div>
+                  </li>
+
+                  
+              </ul>
+            </div>
+
+            <p>PROMOTION CODE</p>
+            <input type="text" placeholder="NYGADFES" required>
+
+            <p>YOUR NAME</p>
+            <input type="text" placeholder="Name" required>
+            <p>YOUR EMAIL</p>
+            <input type="email" placeholder="Email" required>
+
+            <p>RECIPIENT NAME</p>
+            <input type="text" placeholder="Name" required>
+            <p>RECIPIENT ADDRESS</p>
+            <input type="email" placeholder="Email" required>
+
+            <p>PERSONAL MESSAGE</p>
+            <textarea placeholder="Message..." rows="5"></textarea>
+
+            <p>DELIVERY</p>
+            <button class="card_amount"  id="button" onclick="setColor('button', '#101010')";>SEND INSTANTLY</button>
+            <button class="card_amount" id="button2" onclick="setColor('button', '#101010')";>SEND ON A FUTURE DATE</button>
+            
+
+            <input type="submit" value="CONTINUE">
+          </div>
+        </form>
+        
+      </div>
+
     </div>
+
+    
+  </div>
+
+  <div class="section">
+
+    <div class="section_title_1">
+      <h5>Q & A</h5>
+    </div>
+
+    <div class="question_board">
+      <p>Q: Where can I buy a gift card? </p>
+      <p>A: You can purchase a gift card in-store or online at the links above.</p>
+      <p>Q: Can I use my gift cards at any store?</p>
+      <p>A: As of right now, no. The gift cards are location-specific and can only be used at the designated store 
+        location which the original card was purchased at. 
+        If ordering online, please be sure to check the gift card’s store location at the top of the order page.</p>
+      <p>Q: If there a minimum or maximum balance allowed on the gift cards?</p>
+      <p>A: There is not, feel free to add as little or as much as you want onto your card!</p>
+      <p>Q: What happens if I lose my git card?</p>
+      <p>A: The gift cards are treated as cash. Unfortunately, if a gift card is lost, we are unable to replace.</p>
+      <p>Q: Can I reload my gift card?</p>
+      <p>A: Absolutely! Our staff will be able to assist with reloading a gift card in-store.</p>
+      <p>Q: How Do You Order Your eGift Card?</p>
+      <p>A: Click on the links above for your regular store! You can choose a design, amount, 
+        and time of delivery, as well as add a personal message and the recipient’s information.</p>
+      <p>Q: How Do I receive my eGift Card?</p>
+      <p>A: An email will be sent to the recipient’s email address with their gift card and message. You will receive a redemption code 
+        as well as a link to view your egift card. Please keep this email for reference to show our staff when redeeming.</p>
+      <p>Q: How Do I check my Balance?</p>
+      <p>A: You can check your balance by clicking on the “View Your eGift Card” link in your original email. 
+        The page will have information about the card balance, transaction history, 
+        methods of redemption, and the original gifting message.</p>
+      <p>Q: I lost my gift card email, now what?</p>
+      <p>A: No problem! We can look you up through your email or phone number associated with the order.</p>
+      <p>If you still have any issues with your gift cards, please feel free to email us at cocofreshteaandjuice@gmail.com.</p>
+      
+    </div>
+
+
+
+  </div>
+
+
+  </div>
+
 </div>
 
-<!--form-->
-<div>
-
-</div>
 
 <!-- END --> 
 <div class="footer">
   <div class="footer_cell">
+
     <div >
-      <!-- <p style="text-align: center; "><img src="./src/images/coco-fb-1.png"><img src="./src/images/coco-ins-1.png"> </p> -->
       <p style="text-align: center; color: white;">Copyright &copy; 2021 COCO Fresh Tea and Juice</p>
     </div>
-
   </div>
+
 </div>
 
 <script type='text/javascript' src='./src/js/smoothscroll.js'></script> 
