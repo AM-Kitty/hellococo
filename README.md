@@ -1,1 +1,1 @@
-# A new version of COCO Official Website
+# A new version of CoCo Official Website
