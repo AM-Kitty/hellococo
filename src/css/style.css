@@ -33,19 +33,11 @@ p {
 	font-size: 12px;
 	line-height: 20px;/*white-space: pre-wrap;*/
 }
-h4 {
-	font-size: 25px;
-	line-height: 28px;
-}
 h5 {
 	font-size: 18px;
 	line-height: 22px;
 }
  @media screen and (max-width: 960px) {
-h4 {
-	font-size: 16px;
-	line-height: 16px;
-}
 h5 {
 	font-size: 14px;
 	line-height: 16px;
@@ -68,8 +60,6 @@ code {
 	line-height: 24px;
 }
 /*--------------------------------------------Header----------------------------------------------*/
-
-
 .header {
 	position: fixed;
 	top: 0;
@@ -424,76 +414,6 @@ a.rslides1_nav:hover {
 	line-height: 36px;
 }
 
-/*--------------------------------------------about & contact----------------------------------------------*/
-.form input, .formText {
-	border: 1px solid #dedede;
-	background-color: #fbfbfb;
-	font-size: 14px;
-	line-height: 18px;
-	width: 100%;
-	padding: 4px;
-	text-align: left;
-	margin: 0 auto;
-	outline: medium;
-	border-radius: 0;
-	-webkit-appearance: none;
-	box-sizing: border-box;
-	transition: 0.4s;
-}
-.formText {
-	text-align: left;
-}
-.form textarea {
-	height: 100px;
-	max-width: 100%;
-}
-.form input:focus, .form textarea:focus {
-	background-color: #fff;
-	border: 1px solid #d13939;
-}
-.form dt {
-	margin-top: 10px;
-	color: #888;
-	font-size: 12px;
-	line-height: 22px;
-	padding-bottom: 4px;
-}
-.form dl {
-	width: 49%;
-	float: left;
-}
-.form dl:first-child {
-	margin-right: 2%;
-}
-.formBtn button {
-	display: block;
-	padding: 10px;
-	width: 100%;
-	background: #212121;
-	color: #fff;
-	margin: 10px auto;
-	line-height: 18px;
-	cursor: pointer;
-	border: none;
-	transition: 0.4s;
-}
-.formBtn button:hover {
-	background-color: #d13939;
-}
- @media screen and (min-width: 1024px) {
-.textandpic:hover a.pic_btn {
-	opacity: 1;
-}
-a.pic_btn:hover {
-	background-color: #d13939;
-}
-.textandpic:hover img {
-	opacity: 0.8;
-}
-.model~.textandpic img:hover {
-	opacity: 1;
-}
-}
 /*--------------------------------------------gallery----------------------------------------------*/
 
 .pic_box {
@@ -549,39 +469,7 @@ a.pic_btn:hover {
 	z-index: 2;
 	text-align: left;
 }
-/* .pic_box_img:before {
-	content: "";
-	display: inline-block;
- *display:inline;
-	position: absolute;
-	top: 50%;
-	left: 45%;
-	left: calc(50% - 30px);
-	height: 60px;
-	width: 60px;
-	background-image: url(../images/icon-zoom.png);
-	z-index: 3;
-	opacity: 0;
-	filter: alpha(opacity=0);
-	transition: 0.4s;
-} */
-/* .pic_box_img a {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 4;
-} */
-.only_pic {
-	text-align: center;
-	margin: 20px 0;
-}
-.only_pic img {
-	width: auto;
-	height: auto;
-	max-width: 100%;
-}
+
  @media screen and (min-width: 1024px) {
 .pic_box_img:hover span {
 	margin: 30px;
